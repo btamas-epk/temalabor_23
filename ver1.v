@@ -149,7 +149,7 @@ Class CartClosed := {
   
   unique_prod : forall {x y z} (f : x → y) (g : x → z) (h : x → Prod_obj y
 z),
-    ((First ∘ h) ≡ f) /\ ((Second ∘ h) = g) -> h ≡ Prod_mor f g;
+    ((First ∘ h) ≡ f) /\ ((Second ∘ h) ≡ g) -> h ≡ Prod_mor f g;
 
 (* exponenciális *)
 
@@ -163,7 +163,7 @@ z),
     Exp_app ∘ (Prod_mor (Compose (Lam g) First) (Compose (Id y) Second)) ≡ g;
   
   unique_exp : forall {x y z} (h : x → Exp_obj z y),
-    Lam (Exp_app ∘ (Prod_mor (Compose h First) (Compose (Id y) Second))) = h
+    Lam (Exp_app ∘ (Prod_mor (Compose h First) (Compose (Id y) Second))) ≡ h
 
 }.
 
